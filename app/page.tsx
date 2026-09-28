@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import SiteNavigation from "./site-navigation";
 
 const chemicalProducts = [
   "Detergent Needles", "Colour Salt Speckles", "Industrial Fragrance", "Hand Wash Liquid",
@@ -81,28 +82,7 @@ export default function Home() {
           <a className="brand" href="#home" aria-label="Hi-Tech Industries home">
             <Image src="/hitech-logo.jpeg" alt="Hi-Tech Industries and Engineering" width={225} height={75} sizes="(max-width: 640px) 150px, 190px" priority />
           </a>
-          <nav className="desktop-nav" aria-label="Main navigation">
-            <a href="#home">Home</a><a href="#about">About Us</a>
-            <details>
-              <summary>Products <span aria-hidden="true">⌄</span></summary>
-              <div className="nav-dropdown">
-                <a href="#chemicals">Chemical Manufacturing</a>
-                <a href="#machinery">Machinery Manufacturing</a>
-                <a href="#material-handling">Conveyors &amp; Material Handling</a>
-                <a href="#supplies">Equipment &amp; Tools</a>
-              </div>
-            </details>
-            <a href="#services">Services</a><a className="nav-cta" href="#contact">Contact</a>
-          </nav>
-          <details className="mobile-menu">
-            <summary aria-label="Open navigation">Menu</summary>
-            <nav aria-label="Mobile navigation">
-              <a href="#home">Home</a><a href="#about">About Us</a>
-              <a href="#chemicals">Chemical Manufacturing</a><a href="#machinery">Machinery Manufacturing</a>
-              <a href="#material-handling">Conveyors &amp; Material Handling</a>
-              <a href="#supplies">Equipment &amp; Tools</a><a href="#services">Services</a><a href="#contact">Contact</a>
-            </nav>
-          </details>
+          <SiteNavigation />
         </div>
       </header>
 
