@@ -22,6 +22,24 @@ const projectServices = [
 ];
 const supplies = ["Industrial Belts", "Fire Extinguishers", "Safety Equipment", "Industrial Tools"];
 
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Hi-Tech Industries",
+  url: "https://hitech-industries-kanpur.best-bay-3257.chatgpt.site",
+  logo: "https://hitech-industries-kanpur.best-bay-3257.chatgpt.site/hitech-logo.jpeg",
+  email: "hti.kanpur@gmail.com",
+  telephone: "+91-9955880016",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "508/37, Ratanpur, Mirzapur, Panki",
+    addressLocality: "Kanpur",
+    addressRegion: "Uttar Pradesh",
+    postalCode: "208020",
+    addressCountry: "IN",
+  },
+};
+
 function ArrowIcon() { return <span aria-hidden="true">↗</span>; }
 function ProductList({ items }: { items: string[] }) {
   return <ul className="product-list">{items.map((item) => <li key={item}>{item}</li>)}</ul>;
@@ -30,6 +48,11 @@ function ProductList({ items }: { items: string[] }) {
 export default function Home() {
   return (
     <main>
+      <a className="skip-link" href="#home">Skip to main content</a>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+      />
       <div className="topbar">
         <div className="site-shell topbar-inner">
           <p>Manufacturing • Engineering • Industrial Safety</p>
@@ -43,7 +66,7 @@ export default function Home() {
       <header className="site-header">
         <div className="site-shell nav-wrap">
           <a className="brand" href="#home" aria-label="Hi-Tech Industries home">
-            <Image src="/hitech-logo.jpeg" alt="Hi-Tech Industries and Engineering" width={225} height={75} priority />
+            <Image src="/hitech-logo.jpeg" alt="Hi-Tech Industries and Engineering" width={225} height={75} sizes="(max-width: 640px) 150px, 190px" priority />
           </a>
           <nav className="desktop-nav" aria-label="Main navigation">
             <a href="#home">Home</a><a href="#about">About Us</a>
@@ -68,7 +91,7 @@ export default function Home() {
         </div>
       </header>
 
-      <section className="hero" id="home">
+      <section className="hero" id="home" tabIndex={-1}>
         <div className="site-shell hero-grid">
           <div className="hero-copy">
             <p className="eyebrow">Kanpur’s industrial solutions partner</p>
@@ -136,7 +159,7 @@ export default function Home() {
             <div><h3>Projects &amp; Documentation</h3><ProductList items={projectServices} /><a href="#contact" className="text-link">Discuss your requirement <ArrowIcon /></a></div>
           </div>
           <figure className="services-visual">
-            <Image src="/hitech-services.jpeg" alt="Hi-Tech Industries services covering consultancy, projects, machinery and equipment supply" width={1600} height={973} />
+            <Image src="/hitech-services.jpeg" alt="Hi-Tech Industries services covering consultancy, projects, machinery and equipment supply" width={1600} height={973} sizes="(max-width: 1228px) calc(100vw - 48px), 1180px" />
             <figcaption>Our core capabilities at a glance</figcaption>
           </figure>
         </div>
