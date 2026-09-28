@@ -4,8 +4,8 @@ import Link from "next/link";
 import SiteNavigation from "../site-navigation";
 
 export const metadata: Metadata = {
-  title: "About Hi-Tech Industries | Manufacturing & Engineering, Kanpur",
-  description: "Learn about Hi-Tech Industries, our industrial capabilities, vision and values in manufacturing, engineering and safety services.",
+  title: "About Hi-Tech Group | Manufacturing & Engineering, Kanpur",
+  description: "Learn about Hi-Tech Group, established in 2017, and its specialized divisions Hi-Tech Industries and Hi-Tech Engineering.",
   alternates: { canonical: "/about-us" },
 };
 
@@ -44,21 +44,24 @@ export default function AboutUsPage() {
       <section className="about-page-hero" id="about-content" tabIndex={-1}>
         <div className="site-shell">
           <p>HOME <span>/</span> ABOUT US</p>
-          <h1>About Hi-Tech Industries</h1>
-          <strong>Practical industrial solutions. Responsible long-term support.</strong>
+          <h1>About Hi-Tech Group</h1>
+          <strong>Two specialized divisions. One commitment to quality industrial solutions.</strong>
         </div>
       </section>
 
       <section className="about-welcome section">
         <div className="site-shell about-welcome-grid">
           <div>
-            <p className="section-kicker">WELCOME TO HI-TECH INDUSTRIES</p>
-            <h2>A single source for manufacturing, engineering and industrial safety.</h2>
+            <p className="section-kicker">ABOUT OUR GROUP</p>
+            <h2>Welcome to Hi-Tech Group</h2>
           </div>
           <div className="about-long-copy">
-            <p>Hi-Tech Industries supports industrial customers with machinery manufacturing, chemical products, material-handling equipment, factory projects and technical consultancy. From our Kanpur facility, we focus on solutions that are practical to operate, maintain and scale.</p>
-            <p>Our capabilities cover mixing, grinding, screening, liquid processing, conveyors, lifts, fire-fighting systems, plant installation and compliance support. We work with customers to understand the site, production target and operating conditions before recommending a suitable approach.</p>
-            <p>Requirements may range from a compact production setup to larger commercial operations. Our role is to coordinate the right product, fabrication, installation or technical service with clear communication throughout the job.</p>
+            <p>Hi-Tech Group is a manufacturing and engineering organization established in 2017, with experience in Chemical Manufacturing, Machinery Manufacturing, Equipment &amp; Tools Supply, and Technical Services.</p>
+            <p>Since 2017, our manufacturing, production and industrial activities have been carried out under Hi-Tech Industries. With the growth and expansion of our business, in 2026, Hi-Tech Group was organized into two specialized divisions — Hi-Tech Industries and Hi-Tech Engineering, each focused on its respective area of expertise.</p>
+            <p>Hi-Tech Industries is dedicated to Chemical Manufacturing, with a primary focus on Detergent Needles and Colour Salt Speckles, along with Industrial Fragrance and a wide range of Cleaning &amp; Home Care Products.</p>
+            <p>Hi-Tech Engineering focuses on Machinery Manufacturing, Equipment &amp; Tools Supply and Technical Services, providing industrial machinery, material handling solutions and customized engineering solutions according to customer requirements.</p>
+            <p>Our key objective is to provide quality products, reliable engineering solutions and cost-effective industrial solutions while maintaining consistent quality and building long-term relationships with our customers.</p>
+            <p>With our experience since 2017, technical expertise and customer-focused approach, Hi-Tech Group continues to serve customers across North India and other parts of India, combining manufacturing capabilities with practical engineering solutions.</p>
           </div>
         </div>
       </section>

@@ -2,15 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import SiteNavigation from "./site-navigation";
 
-const productCategories = [
-  ["01", "Mixing Machinery", "Solid and liquid material mixing solutions for industrial production."],
-  ["02", "Grinding & Screening", "Machines designed for dependable size reduction, sieving and screening."],
-  ["03", "Liquid Mixing Machinery", "Vessels, stirrers and agitators for uniform liquid mixing."],
-  ["04", "Formulation Plant Machinery", "Integrated equipment for chemical, cosmetic and process plants."],
-  ["05", "Material Handling", "Conveyors, elevators, lifts and trolleys for safer movement."],
-  ["06", "Pharmaceutical Machinery", "Processing and handling solutions for controlled production."],
-];
-
 const featuredMachines = [
   "Double Cone Blender", "High Speed Mixer", "Ribbon Blender", "Rotary Vacuum Dryer",
   "Planetary Mixer", "Rotary Airlock Valve", "Vibro Screen", "High Speed Stirrer Vessel",
@@ -34,6 +25,13 @@ const services = [
 const materialHandling = [
   "Belt Conveyor", "Screw Conveyor", "Roller Conveyor", "Chain Conveyor",
   "Bucket Conveyor", "Inclined Conveyor", "Bucket Elevator", "Material / Goods Lift",
+];
+
+const engineeringProducts = [
+  "Mixing Machinery", "Grinding & Screening Machinery", "Liquid Mixing Machinery",
+  "Formulation Plant Machinery", "Material Handling Machinery", "Pharmaceutical Machinery",
+  "Conveyors & Bucket Elevators", "Material Lifts & Goods Lifts", "Industrial Trolleys",
+  "Conveyor Belts", "Fire Extinguishers", "Safety Equipment", "Industrial Tools", "Lab Equipment",
 ];
 
 const organizationSchema = {
@@ -103,8 +101,21 @@ export default function Home() {
       </div></section>
 
       <section className="catalogue-section section" id="products"><div className="site-shell">
-        <div className="section-title-row"><div><p className="section-kicker">OUR PRODUCT RANGE</p><h2>Machinery for real production needs.</h2></div><a href="#contact">All Enquiries <Arrow /></a></div>
-        <div className="category-cards">{productCategories.map(([number, title, description]) => <article key={title}><span>{number}</span><h3>{title}</h3><p>{description}</p><a href="#contact">Ask for details <Arrow /></a></article>)}</div>
+        <div className="section-title-row"><div><p className="section-kicker">OUR PRODUCT RANGE</p><h2>Two specialized product divisions.</h2></div><a href="#contact">All Enquiries <Arrow /></a></div>
+        <div className="product-partitions">
+          <article className="partition-card partition-chemical">
+            <div className="partition-heading"><span>01</span><div><p>HI-TECH INDUSTRIES</p><h3>Chemical Products</h3></div></div>
+            <p className="partition-intro">Detergent, cleaning, home-care and process chemical products manufactured for institutional and industrial requirements.</p>
+            <ul>{chemicals.map((item) => <li key={item}>{item}</li>)}</ul>
+            <a href="#chemicals">View Chemical Range <Arrow /></a>
+          </article>
+          <article className="partition-card partition-engineering">
+            <div className="partition-heading"><span>02</span><div><p>HI-TECH ENGINEERING</p><h3>Engineering Products</h3></div></div>
+            <p className="partition-intro">Machinery, material handling equipment, factory essentials and customized engineering solutions for production plants.</p>
+            <ul>{engineeringProducts.map((item) => <li key={item}>{item}</li>)}</ul>
+            <a href="#machinery">View Engineering Range <Arrow /></a>
+          </article>
+        </div>
       </div></section>
 
       <section className="machines-section section" id="machinery"><div className="site-shell">

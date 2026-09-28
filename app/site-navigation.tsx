@@ -34,9 +34,11 @@ export default function SiteNavigation() {
         <details onToggle={(event) => event.currentTarget.open && closeMenus(event.currentTarget)}>
           <summary>PRODUCTS <span aria-hidden="true">⌄</span></summary>
           <div className="menu-dropdown" onClick={() => closeMenus()}>
-            <a href="/#machinery">Mixing Machinery</a><a href="/#machinery">Grinding &amp; Screening</a>
-            <a href="/#machinery">Liquid Mixing Machinery</a><a href="/#machinery">Formulation Plant Machinery</a>
-            <a href="/#material-handling">Material Handling Machinery</a><a href="/#chemicals">Chemical Products</a>
+            <span className="menu-group-label">Chemical Products</span>
+            <a href="/#chemicals">Detergent &amp; Cleaning Products</a>
+            <span className="menu-group-label">Engineering Products</span>
+            <a href="/#machinery">Machinery Manufacturing</a><a href="/#material-handling">Material Handling Machinery</a>
+            <a href="/#products">Equipment &amp; Tools</a>
           </div>
         </details>
         <details onToggle={(event) => event.currentTarget.open && closeMenus(event.currentTarget)}>
