@@ -1256,10 +1256,10 @@ footer nav a:hover {
     display: none;
   }
   .masthead-inner {
-    min-height: 72px;
+    min-height: 0;
     display: flex;
-    justify-content: flex-end;
-    padding: 6px 0 4px;
+    justify-content: flex-start;
+    padding: 2px 0;
   }
   .masthead-brand {
     display: block;
@@ -1431,12 +1431,12 @@ footer nav a:hover {
 
 @media (max-width: 480px) {
   .masthead-inner {
-    min-height: 68px;
-    justify-content: flex-end;
-    padding: 6px 0 3px;
+    min-height: 0;
+    justify-content: flex-start;
+    padding: 2px 0;
   }
   .masthead-brand img {
-    width: 195px;
+    width: 230px;
   }
   .hero h1 {
     font-size: 34px;
