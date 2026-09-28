@@ -29,37 +29,37 @@ export default function SiteNavigation() {
   return (
     <nav ref={navRef} className="main-navigation" aria-label="Main navigation">
       <div className="site-shell navigation-inner">
-        <a href="#home">HOME</a>
-        <a href="#about">ABOUT US</a>
+        <a href="/#home">HOME</a>
+        <a href="/about-us">ABOUT US</a>
         <details onToggle={(event) => event.currentTarget.open && closeMenus(event.currentTarget)}>
           <summary>PRODUCTS <span aria-hidden="true">⌄</span></summary>
           <div className="menu-dropdown" onClick={() => closeMenus()}>
-            <a href="#machinery">Mixing Machinery</a><a href="#machinery">Grinding &amp; Screening</a>
-            <a href="#machinery">Liquid Mixing Machinery</a><a href="#machinery">Formulation Plant Machinery</a>
-            <a href="#material-handling">Material Handling Machinery</a><a href="#chemicals">Chemical Products</a>
+            <a href="/#machinery">Mixing Machinery</a><a href="/#machinery">Grinding &amp; Screening</a>
+            <a href="/#machinery">Liquid Mixing Machinery</a><a href="/#machinery">Formulation Plant Machinery</a>
+            <a href="/#material-handling">Material Handling Machinery</a><a href="/#chemicals">Chemical Products</a>
           </div>
         </details>
         <details onToggle={(event) => event.currentTarget.open && closeMenus(event.currentTarget)}>
           <summary>ENGINEERING <span aria-hidden="true">⌄</span></summary>
           <div className="menu-dropdown" onClick={() => closeMenus()}>
-            <a href="#material-handling">Conveyors &amp; Lifts</a><a href="#services">Plant Installation</a>
-            <a href="#services">Piping &amp; Utilities</a><a href="#services">Structural Fabrication</a>
+            <a href="/#material-handling">Conveyors &amp; Lifts</a><a href="/#services">Plant Installation</a>
+            <a href="/#services">Piping &amp; Utilities</a><a href="/#services">Structural Fabrication</a>
           </div>
         </details>
         <details onToggle={(event) => event.currentTarget.open && closeMenus(event.currentTarget)}>
           <summary>SERVICES <span aria-hidden="true">⌄</span></summary>
           <div className="menu-dropdown" onClick={() => closeMenus()}>
-            <a href="#services">HSE Consultancy</a><a href="#services">Technical &amp; Safety Audits</a>
-            <a href="#services">Factory Licensing</a><a href="#services">Fire Fighting Systems</a>
+            <a href="/#services">HSE Consultancy</a><a href="/#services">Technical &amp; Safety Audits</a>
+            <a href="/#services">Factory Licensing</a><a href="/#services">Fire Fighting Systems</a>
           </div>
         </details>
-        <a href="#contact">CONTACT</a>
+        <a href="/#contact">CONTACT</a>
         <details className="mobile-navigation" onToggle={(event) => event.currentTarget.open && closeMenus(event.currentTarget)}>
           <summary aria-label="Open navigation">MENU ☰</summary>
           <div className="mobile-dropdown" onClick={() => closeMenus()}>
-            <a href="#home">Home</a><a href="#about">About Us</a><a href="#products">Products</a>
-            <a href="#machinery">Machinery</a><a href="#chemicals">Chemicals</a>
-            <a href="#services">Services</a><a href="#contact">Contact</a>
+            <a href="/#home">Home</a><a href="/about-us">About Us</a><a href="/#products">Products</a>
+            <a href="/#machinery">Machinery</a><a href="/#chemicals">Chemicals</a>
+            <a href="/#services">Services</a><a href="/#contact">Contact</a>
           </div>
         </details>
       </div>

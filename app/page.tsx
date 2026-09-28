@@ -98,7 +98,7 @@ export default function Home() {
       </div></section>
 
       <section className="about-section section" id="about"><div className="site-shell about-grid">
-        <div className="about-copy"><p className="section-kicker">ABOUT HI-TECH INDUSTRIES</p><h2>Complete industrial support under one roof.</h2><p>Hi-Tech Industries is a Kanpur-based manufacturing and engineering company serving factories with machinery, chemical products, equipment supply and technical consultancy. Our focus is simple: practical solutions, clear coordination and dependable support.</p><p>We provide standard as well as requirement-based solutions for mixing, grinding, screening, liquid processing, material handling, plant installation and industrial safety.</p><a className="text-button" href="#contact">DISCUSS YOUR REQUIREMENT <Arrow /></a></div>
+        <div className="about-copy"><p className="section-kicker">ABOUT HI-TECH INDUSTRIES</p><h2>Complete industrial support under one roof.</h2><p>Hi-Tech Industries is a Kanpur-based manufacturing and engineering company serving factories with machinery, chemical products, equipment supply and technical consultancy. Our focus is simple: practical solutions, clear coordination and dependable support.</p><p>We provide standard as well as requirement-based solutions for mixing, grinding, screening, liquid processing, material handling, plant installation and industrial safety.</p><a className="text-button" href="/about-us">READ OUR STORY <Arrow /></a></div>
         <div className="about-board"><div><span>01</span><h3>VISION</h3><p>To provide integrated industrial solutions that improve productivity, safety and plant reliability.</p></div><div><span>02</span><h3>MISSION</h3><p>To deliver suitable products and engineering support with honest communication and timely service.</p></div><div><span>03</span><h3>VALUES</h3><p>Integrity, ownership, innovation, adaptability, teamwork and customer responsibility.</p></div></div>
       </div></section>
 
@@ -137,7 +137,7 @@ export default function Home() {
 
       <footer><div className="site-shell footer-grid">
         <div className="footer-about"><Image src="/hitech-logo.jpeg" alt="Hi-Tech Industries" width={900} height={288} /><p>Manufacturing, engineering, material handling and industrial safety solutions from Kanpur.</p></div>
-        <div><h3>Quick Links</h3><nav><a href="#home">Home</a><a href="#about">About Us</a><a href="#products">Products</a><a href="#services">Services</a><a href="#contact">Contact</a></nav></div>
+        <div><h3>Quick Links</h3><nav><a href="#home">Home</a><a href="/about-us">About Us</a><a href="#products">Products</a><a href="#services">Services</a><a href="#contact">Contact</a></nav></div>
         <div><h3>Product Groups</h3><nav><a href="#machinery">Mixing Machinery</a><a href="#machinery">Grinding Machinery</a><a href="#material-handling">Material Handling</a><a href="#chemicals">Chemical Products</a></nav></div>
         <div><h3>Legal</h3><nav><Link href="/privacy-policy">Privacy Policy</Link><Link href="/terms-and-conditions">Terms &amp; Conditions</Link><Link href="/disclaimer">Disclaimer</Link><Link href="/cancellation-and-refund">Cancellation &amp; Refunds</Link></nav></div>
       </div><div className="footer-bottom"><div className="site-shell"><p>© 2026 Hi-Tech Industries. All rights reserved.</p><a href="#home">Back to top ↑</a></div></div></footer>

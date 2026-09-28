@@ -15,6 +15,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
         `${siteUrl}/hitech-services.jpeg`,
       ],
     },
+    {
+      url: `${siteUrl}/about-us`,
+      lastModified: "2026-09-28",
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
     ...["privacy-policy", "terms-and-conditions", "disclaimer", "cancellation-and-refund"].map((page) => ({
       url: `${siteUrl}/${page}`,
       lastModified: "2026-09-28",
