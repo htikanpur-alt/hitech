@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import HeroSlider from "./hero-slider";
 import SiteNavigation from "./site-navigation";
 
 const featuredMachines = [
@@ -32,6 +33,16 @@ const engineeringProducts = [
   "Formulation Plant Machinery", "Material Handling Machinery", "Pharmaceutical Machinery",
   "Conveyors & Bucket Elevators", "Material Lifts & Goods Lifts", "Industrial Trolleys",
   "Conveyor Belts", "Fire Extinguishers", "Safety Equipment", "Industrial Tools", "Lab Equipment",
+];
+
+const chemicalGallery = [
+  { src: "/products/detergent-needles-colour-benefits.jpeg", alt: "Colourful detergent needles in five shades", label: "Detergent Needles", className: "gallery-item-wide" },
+  { src: "/products/detergent-needles-20kg-bag.jpeg", alt: "Hi-Tech Industries 20 kilogram detergent needles bag", label: "Industrial Pack", className: "gallery-item-tall" },
+  { src: "/products/detergent-needles-colour-showcase.jpeg", alt: "Detergent needles in pink, blue, orange, green and white", label: "Bright Colours" },
+  { src: "/products/detergent-needles-six-colours.jpeg", alt: "Six colours of detergent needles", label: "Reliable Quality" },
+  { src: "/products/colour-salt-silver-grade.jpeg", alt: "Colour salt speckles silver grade", label: "Colour Salt Speckles", className: "gallery-item-wide" },
+  { src: "/products/colour-speckles-stock.jpeg", alt: "Packed colour speckles ready for industrial supply", label: "Ready Stock" },
+  { src: "/products/industrial-fragrance-showcase.jpeg", alt: "Lite industrial fragrances for cleaning and home care products", label: "Industrial Fragrance", className: "gallery-item-wide" },
 ];
 
 const organizationSchema = {
@@ -74,18 +85,12 @@ export default function Home() {
 
       <SiteNavigation />
 
-      <section className="hero" id="home" tabIndex={-1}>
-        <div className="site-shell hero-grid">
-          <div className="hero-copy">
-            <p className="eyebrow">One stop solution provider</p>
-            <h1>Industrial machinery, chemicals and safety support.</h1>
-            <p>Practical equipment, formulations and engineering services for chemical, food, pharmaceutical and general manufacturing plants.</p>
-            <div className="hero-actions"><a className="button button-orange" href="#products">View Products <Arrow /></a><a className="button button-light" href="#contact">Get Free Enquiry <Arrow /></a></div>
-          </div>
-          <div className="hero-visual"><Image src="/hitech-services.jpeg" alt="Hi-Tech Industries industrial services and machinery capabilities" width={1600} height={973} sizes="(max-width: 800px) 100vw, 48vw" /></div>
-        </div>
+      <section className="hero hero-slider-section" id="home" tabIndex={-1}>
+        <HeroSlider />
         <a className="hero-side-tab side-blue" href="#services">Safety Audit</a><a className="hero-side-tab side-orange" href="#contact">Enquiry</a>
       </section>
+
+      <section className="hero-enquiry-band"><div className="site-shell hero-enquiry-inner"><div><p className="eyebrow">One stop industrial solution provider</p><h1>Chemicals, machinery and safety support for your plant.</h1></div><div className="hero-actions"><a className="button button-orange" href="#products">View Products <Arrow /></a><a className="button button-light" href="#contact">Get Free Enquiry <Arrow /></a></div></div></section>
 
       <section className="division-band" aria-label="Core divisions"><div className="site-shell"><h2>Our Core Divisions</h2><div className="division-list">
         <a href="#machinery"><span>⚙</span><strong>Machinery</strong></a><a href="#chemicals"><span>◆</span><strong>Chemicals</strong></a><a href="#material-handling"><span>⇄</span><strong>Material Handling</strong></a><a href="#services"><span>✓</span><strong>HSE &amp; Projects</strong></a>
@@ -116,6 +121,11 @@ export default function Home() {
             <a href="#machinery">View Engineering Range <Arrow /></a>
           </article>
         </div>
+      </div></section>
+
+      <section className="chemical-gallery section" aria-labelledby="chemical-gallery-heading"><div className="site-shell">
+        <div className="section-title-row"><div><p className="section-kicker">PRODUCT SHOWCASE</p><h2 id="chemical-gallery-heading">Colour, consistency and cleaning performance.</h2></div><a href="#contact">Request a Sample <Arrow /></a></div>
+        <div className="gallery-grid">{chemicalGallery.map((image) => <figure className={`gallery-item ${image.className ?? ""}`} key={image.src}><Image src={image.src} alt={image.alt} fill sizes="(max-width: 760px) 100vw, (max-width: 1100px) 50vw, 25vw" /><figcaption>{image.label}</figcaption></figure>)}</div>
       </div></section>
 
       <section className="machines-section section" id="machinery"><div className="site-shell">
