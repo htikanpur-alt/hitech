@@ -2,26 +2,36 @@ import Image from "next/image";
 import Link from "next/link";
 
 const chemicalProducts = [
-  "Detergent Needles", "Colour Salt Speckles", "Industrial Fragrance", "Hand Wash",
-  "Dish Wash", "Toilet Cleaner", "Floor Cleaner", "Tiles Cleaner", "Glass Cleaner",
+  "Detergent Needles", "Colour Salt Speckles", "Industrial Fragrance", "Hand Wash Liquid",
+  "Dish Wash Gel", "Toilet Cleaner", "Floor Cleaner", "Tiles Cleaner", "Glass Cleaner",
   "Sanitary Cleaner", "Liquid Detergent", "White Phenyl", "Black Phenyl", "Bleaching Powder",
-  "Hydrochloric Acid (HCl)", "Sodium Hypochlorite",
+  "Hydrochloric Acid (HCl)", "Sodium Hypochlorite (HYPO)", "DM Water",
 ];
 
-const machinery = ["Food Processing Machinery", "Detergent Manufacturing Machinery", "Material Lifts", "Industrial Conveyors"];
-const services = [
-  "Technical Consultancy", "HSE Consultancy", "Testing & Certification", "Technical Audit",
-  "Safety Audit", "Fire Safety Audit", "HAZOP Study", "Institutional Training – Section 111-A",
+const machinery = [
+  "Ribbon Mixer / Blender", "Sigma Mixer", "Cage Mill", "Detergent Noodle Machine",
+  "Vibro Sifter", "Liquid Mixing Agitator", "Food Processing Machinery",
+];
+const materialHandling = [
+  "Belt Conveyor", "Screw Conveyor", "Roller Conveyor", "Chain Conveyor", "Bucket Conveyor",
+  "Inclined Conveyor", "Bucket Elevator", "Material Lift / Goods Lift",
+];
+const safetyServices = [
+  "HSE Consultancy", "Testing & Certification", "Technical Audit", "Safety Audit",
+  "Fire Safety Audit", "HAZOP Study", "Institutional Training – Section 111-A",
   "Schedule 7 & 8 Audit & Compliance", "Risk Assessment & Hazard Identification",
   "On-Site Emergency Plan Preparation", "Off-Site Emergency Plan Preparation",
-  "Fire Fighting System Design & Installation",
 ];
-const projectServices = [
-  "Technical Documentation", "Factory Licensing & Layout Approval", "Industrial Project & Installation",
+const engineeringServices = [
+  "Technical Consultancy", "Technical Documentation", "Factory Licensing", "Factory Layout Approval",
+  "Industrial Project & Installation", "Fire Fighting System Design & Installation",
   "Fire Fighting System Installation", "Piping & Utility Installation", "Structure Fabrication & Erection",
-  "Industrial Plant Installation & Modification",
+  "Industrial Plant Installation & Maintenance", "Industrial Plant Modification",
 ];
-const supplies = ["Industrial Belts", "Fire Extinguishers", "Safety Equipment", "Industrial Tools"];
+const supplies = [
+  "Conveyor Belts", "Industrial Trolleys", "Material Handling Trolleys", "Lab Equipment",
+  "Fire Extinguishers", "Safety Equipment", "Industrial Tools",
+];
 
 const organizationSchema = {
   "@context": "https://schema.org",
@@ -78,6 +88,7 @@ export default function Home() {
               <div className="nav-dropdown">
                 <a href="#chemicals">Chemical Manufacturing</a>
                 <a href="#machinery">Machinery Manufacturing</a>
+                <a href="#material-handling">Conveyors &amp; Material Handling</a>
                 <a href="#supplies">Equipment &amp; Tools</a>
               </div>
             </details>
@@ -88,31 +99,41 @@ export default function Home() {
             <nav aria-label="Mobile navigation">
               <a href="#home">Home</a><a href="#about">About Us</a>
               <a href="#chemicals">Chemical Manufacturing</a><a href="#machinery">Machinery Manufacturing</a>
+              <a href="#material-handling">Conveyors &amp; Material Handling</a>
               <a href="#supplies">Equipment &amp; Tools</a><a href="#services">Services</a><a href="#contact">Contact</a>
             </nav>
           </details>
         </div>
       </header>
 
+      <nav className="category-strip" aria-label="Business categories">
+        <a className="strip-orange" href="#chemicals"><strong>Chemical Products</strong><span>17 formulations</span></a>
+        <a className="strip-blue" href="#machinery"><strong>Industrial Machinery</strong><span>Mixing &amp; processing</span></a>
+        <a className="strip-green" href="#material-handling"><strong>Material Handling</strong><span>Conveyors, lifts &amp; trolleys</span></a>
+        <a className="strip-pink" href="#services"><strong>Safety &amp; HSE</strong><span>Audit, training &amp; compliance</span></a>
+      </nav>
+
       <section className="hero" id="home" tabIndex={-1}>
         <div className="site-shell hero-grid">
           <div className="hero-copy">
             <p className="eyebrow">Kanpur’s industrial solutions partner</p>
-            <h1>Built for industry.<br /><span>Engineered for safety.</span></h1>
-            <p className="hero-lede">Chemicals, machinery, industrial equipment and technical consultancy—delivered by one dependable team.</p>
+            <h1>Chemicals. Machinery.<br /><span>Safety. One team.</span></h1>
+            <p className="hero-lede">Manufacturing, material handling, industrial equipment and technical consultancy for factories across India.</p>
             <div className="hero-actions">
               <a className="button button-primary" href="#products">Explore our products <ArrowIcon /></a>
               <a className="button button-secondary" href="tel:+919955880016">Call +91 99558 80016</a>
             </div>
+            <p className="hero-slogan">“Innovation is our nature.”</p>
           </div>
           <div className="hero-panel" aria-label="Hi-Tech Industries capabilities">
-            <div className="hero-panel-head"><span>01</span><p>End-to-end industrial support</p></div>
-            <div className="capability-list">
-              <div><strong>Chemical</strong><span>Manufacturing</span></div>
-              <div><strong>Machinery</strong><span>Fabrication</span></div>
-              <div><strong>HSE</strong><span>Consultancy</span></div>
+            <div className="hero-panel-head"><span>HI-TECH</span><p>Complete industrial support</p></div>
+            <div className="capability-grid">
+              <a href="#chemicals" className="cap-orange"><span>01</span><strong>Chemical</strong><small>Manufacturing</small></a>
+              <a href="#machinery" className="cap-blue"><span>02</span><strong>Machinery</strong><small>Manufacturing</small></a>
+              <a href="#material-handling" className="cap-green"><span>03</span><strong>Conveyors</strong><small>Material handling</small></a>
+              <a href="#services" className="cap-pink"><span>04</span><strong>HSE &amp; Fire</strong><small>Consultancy</small></a>
             </div>
-            <p className="hero-panel-note">From factory floor requirements to statutory safety compliance.</p>
+            <p className="hero-panel-note"><strong>Need a custom solution?</strong> Speak directly with our Kanpur team.</p>
           </div>
         </div>
       </section>
@@ -123,9 +144,9 @@ export default function Home() {
           <div className="intro-copy">
             <p>Hi-Tech Industries brings manufacturing, engineering support and industrial safety expertise together under one roof. We help factories and project teams source dependable products, improve processes and meet essential compliance requirements.</p>
             <div className="value-row">
-              <div><strong>One point</strong><span>for products and services</span></div>
-              <div><strong>Site-ready</strong><span>engineering support</span></div>
-              <div><strong>Safety-first</strong><span>project execution</span></div>
+              <div className="value-orange"><strong>One point</strong><span>for products and services</span></div>
+              <div className="value-blue"><strong>Site-ready</strong><span>engineering support</span></div>
+              <div className="value-green"><strong>Safety-first</strong><span>project execution</span></div>
             </div>
           </div>
         </div>
@@ -137,15 +158,18 @@ export default function Home() {
             <div><p className="section-kicker">What we manufacture &amp; supply</p><h2>Industrial products, ready for real work.</h2></div>
             <p>From daily-use cleaning formulations to custom machinery and essential safety equipment.</p>
           </div>
-          <div className="product-grid">
-            <article className="product-card product-card-large" id="chemicals">
-              <div className="card-number">01</div><div><p className="card-label">Manufacturing</p><h3>Chemical Products</h3><ProductList items={chemicalProducts} /></div>
+          <div className="product-grid product-grid-detailed">
+            <article className="product-card product-card-large card-orange" id="chemicals">
+              <div className="card-number">01</div><div><p className="card-label">In-house manufacturing range</p><h3>Chemical Products</h3><ProductList items={chemicalProducts} /></div>
             </article>
-            <article className="product-card" id="machinery">
-              <div className="card-number">02</div><div><p className="card-label">Engineering</p><h3>Machinery</h3><ProductList items={machinery} /></div>
+            <article className="product-card card-blue" id="machinery">
+              <div className="card-number">02</div><div><p className="card-label">Mixing &amp; processing</p><h3>Machinery Manufacturing</h3><ProductList items={machinery} /></div>
             </article>
-            <article className="product-card product-card-dark" id="supplies">
-              <div className="card-number">03</div><div><p className="card-label">Industrial supply</p><h3>Equipment &amp; Tools</h3><ProductList items={supplies} /></div>
+            <article className="product-card card-green" id="material-handling">
+              <div className="card-number">03</div><div><p className="card-label">Movement &amp; lifting</p><h3>Conveyors &amp; Material Handling</h3><ProductList items={materialHandling} /></div>
+            </article>
+            <article className="product-card card-pink" id="supplies">
+              <div className="card-number">04</div><div><p className="card-label">Factory essentials</p><h3>Equipment &amp; Tools Supply</h3><ProductList items={supplies} /></div>
             </article>
           </div>
         </div>
@@ -157,9 +181,10 @@ export default function Home() {
             <div><p className="section-kicker light">Consultancy &amp; compliance</p><h2>Safer operations.<br />Stronger systems.</h2></div>
             <p>Clear, actionable technical guidance for factories, institutions and industrial projects.</p>
           </div>
-          <div className="service-columns">
-            <div><h3>HSE &amp; Technical Consultancy</h3><ProductList items={services} /></div>
-            <div><h3>Projects &amp; Documentation</h3><ProductList items={projectServices} /><a href="#contact" className="text-link">Discuss your requirement <ArrowIcon /></a></div>
+          <div className="service-columns service-columns-detailed">
+            <div className="service-box service-box-orange"><span className="service-code">01</span><h3>HSE, Audit &amp; Compliance</h3><ProductList items={safetyServices} /></div>
+            <div className="service-box service-box-blue"><span className="service-code">02</span><h3>Projects &amp; Technical Support</h3><ProductList items={engineeringServices} /></div>
+            <div className="service-box service-box-green"><span className="service-code">03</span><h3>Equipment Supply</h3><ProductList items={["Fire Extinguisher Supply", "Safety Equipment Supply", "Industrial Tools", "Lab Equipment", "Conveyor Belts", "Material Handling Trolleys"]} /><a href="#contact" className="text-link">Discuss your requirement <ArrowIcon /></a></div>
           </div>
           <figure className="services-visual">
             <Image src="/hitech-services.jpeg" alt="Hi-Tech Industries services covering consultancy, projects, machinery and equipment supply" width={1600} height={973} sizes="(max-width: 1228px) calc(100vw - 48px), 1180px" />

@@ -1,5 +1,20 @@
 import type { Metadata, Viewport } from "next";
+import { Play, Poppins } from "next/font/google";
 import "./globals.css";
+
+const poppins = Poppins({
+  variable: "--font-poppins",
+  subsets: ["latin"],
+  weight: ["500", "600", "700"],
+  display: "swap",
+});
+
+const play = Play({
+  variable: "--font-play",
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://hitech-industries-kanpur.best-bay-3257.chatgpt.site"),
@@ -38,7 +53,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" className="h-full antialiased">
+    <html lang="en" className={`${poppins.variable} ${play.variable} h-full antialiased`}>
       <body className="min-h-full">{children}</body>
     </html>
   );
