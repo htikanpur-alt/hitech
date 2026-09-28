@@ -4,11 +4,11 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 
 const slides = [
-  { src: "/products/detergent-needles-pack-banner.jpeg", alt: "Lite detergent needles with a Hi-Tech Industries product pack", title: "Detergent Needles" },
-  { src: "/products/colour-salt-speckles-banner.jpeg", alt: "Colour salt speckles in blue, orange, yellow, pink, green and red", title: "Colour Salt Speckles" },
-  { src: "/products/industrial-fragrance-banner.jpeg", alt: "Lite industrial fragrances for home care and cleaning products", title: "Industrial Fragrance" },
-  { src: "/products/ribbon-mixer.jpeg", alt: "Hi-Tech Engineering 500 kilogram ribbon mixer", title: "Ribbon Mixer" },
-  { src: "/products/sigma-mixer.jpeg", alt: "Hi-Tech Engineering sigma mixer", title: "Sigma Mixer" },
+  { src: "/products/detergent-needles-pack-banner-1600x500.jpg", alt: "Lite detergent needles with a Hi-Tech Industries product pack", title: "Detergent Needles" },
+  { src: "/products/colour-salt-speckles-banner-1600x500.jpg", alt: "Colour salt speckles in blue, orange, yellow, pink, green and red", title: "Colour Salt Speckles" },
+  { src: "/products/industrial-fragrance-banner-1600x500.jpg", alt: "Lite industrial fragrances for home care and cleaning products", title: "Industrial Fragrance" },
+  { src: "/products/ribbon-mixer-1600x500.jpg", alt: "Hi-Tech Engineering 500 kilogram ribbon mixer", title: "Ribbon Mixer" },
+  { src: "/products/sigma-mixer-1600x500.jpg", alt: "Hi-Tech Engineering sigma mixer", title: "Sigma Mixer" },
 ];
 
 export default function HeroSlider() {
