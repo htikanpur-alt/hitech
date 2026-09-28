@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const chemicalProducts = [
   "Detergent Needles", "Colour Salt Speckles", "Industrial Fragrance", "Hand Wash",
@@ -196,7 +197,13 @@ export default function Home() {
       <footer>
         <div className="site-shell footer-grid">
           <div className="brand footer-brand"><span className="brand-mark">HT</span><span><strong>Hi-Tech Industries</strong><small>Manufacturing • Engineering</small></span></div>
-          <p>© 2026 Hi-Tech Industries. All rights reserved.</p><a href="#home">Back to top ↑</a>
+          <nav className="footer-links" aria-label="Legal information">
+            <Link href="/privacy-policy">Privacy Policy</Link>
+            <Link href="/terms-and-conditions">Terms &amp; Conditions</Link>
+            <Link href="/disclaimer">Disclaimer</Link>
+            <Link href="/cancellation-and-refund">Cancellation &amp; Refunds</Link>
+          </nav>
+          <div className="footer-meta"><p>© 2026 Hi-Tech Industries. All rights reserved.</p><a href="#home">Back to top ↑</a></div>
         </div>
       </footer>
     </main>
