@@ -30,8 +30,60 @@ const chemicals = [
   "Black Phenyl",
   "Bleaching Powder",
   "Hydrochloric Acid (HCl)",
-  "Sodium Hypochlorite (HYPO)",
+  "Sodium Hypochlorite (Hypo)",
   "DM Water",
+];
+
+const chemicalProductDetails = [
+  { name: "Detergent Needles" },
+  {
+    name: "Colour Salt Speckles",
+    image: "/products/colour-salt-speckles-banner-1600x500.jpg",
+    imageAlt: "Lite colour salt speckles in six colours",
+    variants: ["Lite Colour Salt Speckles", "Colour Salt Speckles (Silver)"],
+  },
+  {
+    name: "Industrial Fragrance",
+    image: "/products/industrial-fragrance-banner-1600x500.jpg",
+    imageAlt: "Lite industrial fragrances for home care and cleaning products",
+    variants: [
+      "Lite Lemon",
+      "Lite Jasmine",
+      "Lite Lavender",
+      "Lite Excel",
+      "Lite Orange",
+      "Lite Rose",
+    ],
+  },
+  {
+    name: "Hand Wash Liquid",
+    variants: ["Hand Wash Liquid (Silver)", "Hand Wash Liquid (Gold)"],
+  },
+  {
+    name: "Dish Wash Gel",
+    variants: ["Dish Wash Gel (Silver)", "Dish Wash Gel (Gold)"],
+  },
+  {
+    name: "Toilet Cleaner",
+    variants: ["Toilet Cleaner (Silver)", "Toilet Cleaner (Gold)"],
+  },
+  {
+    name: "Floor Cleaner",
+    variants: ["Floor Cleaner (Silver)", "Floor Cleaner (Gold)"],
+  },
+  { name: "Tiles Cleaner", variants: ["Tiles Cleaner (Gold)"] },
+  {
+    name: "Glass Cleaner",
+    variants: ["Glass Cleaner (Silver)", "Glass Cleaner (Gold)"],
+  },
+  { name: "Sanitary Cleaner" },
+  { name: "Liquid Detergent" },
+  { name: "White Phenyl" },
+  { name: "Black Phenyl" },
+  { name: "Bleaching Powder" },
+  { name: "Hydrochloric Acid (HCl)" },
+  { name: "Sodium Hypochlorite (Hypo)" },
+  { name: "DM Water" },
 ];
 
 const services = [
@@ -473,11 +525,50 @@ export default function Home() {
           <article className="detail-panel chemical-panel" id="chemicals">
             <p className="section-kicker">CHEMICAL MANUFACTURING</p>
             <h2>Cleaning and process chemicals.</h2>
-            <ul>
-              {chemicals.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
+            <div className="chemical-product-list">
+              {chemicalProductDetails.map((product, index) =>
+                product.variants ? (
+                  <details
+                    className={`chemical-product ${product.image ? "chemical-product-featured" : ""}`}
+                    key={product.name}
+                  >
+                    <summary>
+                      <span>{String(index + 1).padStart(2, "0")}</span>
+                      <strong>{product.name}</strong>
+                      <em>
+                        {product.variants.length}{" "}
+                        {product.variants.length === 1 ? "type" : "types"}
+                      </em>
+                    </summary>
+                    <div className="chemical-product-content">
+                      {product.image ? (
+                        <div className="chemical-product-image">
+                          <Image
+                            src={product.image}
+                            alt={product.imageAlt}
+                            fill
+                            sizes="(max-width: 760px) 100vw, 48vw"
+                          />
+                        </div>
+                      ) : null}
+                      <ul>
+                        {product.variants.map((variant) => (
+                          <li key={variant}>{variant}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  </details>
+                ) : (
+                  <div
+                    className="chemical-product chemical-product-single"
+                    key={product.name}
+                  >
+                    <span>{String(index + 1).padStart(2, "0")}</span>
+                    <strong>{product.name}</strong>
+                  </div>
+                ),
+              )}
+            </div>
           </article>
           <article
             className="detail-panel handling-panel"
