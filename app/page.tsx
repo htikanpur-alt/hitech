@@ -40,6 +40,8 @@ const organizationSchema = {
   },
 };
 
+const emailComposeUrl = "https://mail.google.com/mail/?view=cm&fs=1&to=hti.kanpur%40gmail.com&su=Website%20Enquiry%20%E2%80%93%20Hi-Tech%20Industries";
+
 function ArrowIcon() { return <span aria-hidden="true">↗</span>; }
 function ProductList({ items }: { items: string[] }) {
   return <ul className="product-list">{items.map((item) => <li key={item}>{item}</li>)}</ul>;
@@ -57,7 +59,7 @@ export default function Home() {
         <div className="site-shell topbar-inner">
           <p>Manufacturing • Engineering • Industrial Safety</p>
           <div className="topbar-links">
-            <a href="mailto:hti.kanpur@gmail.com">hti.kanpur@gmail.com</a>
+            <a href={emailComposeUrl} target="_blank" rel="noreferrer">hti.kanpur@gmail.com</a>
             <a href="tel:+919955880016">+91 99558 80016</a>
           </div>
         </div>
@@ -181,11 +183,11 @@ export default function Home() {
           <div>
             <p className="section-kicker">Let’s talk</p><h2>Tell us what your plant needs.</h2>
             <p>For product enquiries, consultancy or project support, contact our Kanpur team directly.</p>
-            <div className="contact-actions"><a className="button button-primary" href="tel:+919955880016">Call us now <ArrowIcon /></a><a className="button button-outline" href="mailto:hti.kanpur@gmail.com">Send an email</a></div>
+            <div className="contact-actions"><a className="button button-primary" href="tel:+919955880016">Call us now <ArrowIcon /></a><a className="button button-outline" href={emailComposeUrl} target="_blank" rel="noreferrer">Send an email <ArrowIcon /></a></div>
           </div>
           <address>
             <div><span>Factory address</span><strong>508/37, Ratanpur, Mirzapur,<br />Panki, Kanpur (UP) – 208020</strong></div>
-            <div><span>Email</span><a href="mailto:hti.kanpur@gmail.com">hti.kanpur@gmail.com</a></div>
+            <div><span>Email</span><a href={emailComposeUrl} target="_blank" rel="noreferrer">hti.kanpur@gmail.com</a></div>
             <div><span>Phone</span><a href="tel:+919955880016">+91 99558 80016</a></div>
           </address>
         </div>
