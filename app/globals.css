@@ -246,6 +246,7 @@ footer nav a:hover { color: var(--orange); }
 .about-page-hero strong { display: block; margin-top: 13px; color: #d8e8f1; font-size: 17px; font-weight: 500; }
 .about-welcome-grid { display: grid; grid-template-columns: .82fr 1.18fr; gap: 74px; align-items: start; }
 .about-long-copy p { margin: 0 0 17px; color: #4f5c63; font-size: 16px; line-height: 1.78; }
+.about-single-copy p { margin: 0; }
 .about-capabilities { background: var(--mist); border-top: 1px solid var(--line); }
 .about-capability-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; }
 .about-capability-grid article { min-height: 214px; padding: 21px 19px; background: #fff; border-bottom: 5px solid var(--orange); text-align: center; box-shadow: 0 7px 20px rgba(6,63,108,.07); }
