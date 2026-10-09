@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import HeroSlider from "./hero-slider";
 import SiteNavigation from "./site-navigation";
+import AddressSection from "../components/AddressSection";
 
 const featuredMachines = [
   "Double Cone Blender",
@@ -236,8 +237,8 @@ export default function Home() {
           <div className="masthead-promise">
             <span>ONE STOP INDUSTRIAL SOLUTION</span>
             <strong className="whitespace-nowrap truncate">
-              Chemical Manufacturing • Machine Manufacturing • Technical
-              Consultancy
+              Chemical Manufacturing <br /> Machine Manufacturing <br />{" "}
+              Technical Consultancy
             </strong>
           </div>
           {/* <div className="masthead-contact">
@@ -650,59 +651,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="contact-section section" id="contact">
-        <div className="site-shell contact-grid">
-          <div>
-            <p className="section-kicker">CONTACT US</p>
-            <h2>Tell us what your plant needs.</h2>
-            <p>
-              For machinery, chemicals, consultancy or project support, contact
-              our Kanpur factory team.
-            </p>
-          </div>
-          <address>
-            <div>
-              <span>FACTORY ADDRESS</span>
-              <strong>
-                508/37, Ratanpur, Mirzapur,
-                <br />
-                Panki, Kanpur (UP) – 208020
-              </strong>
-            </div>
-            <div>
-              <span>PHONE</span>
-              <a href="tel:+919955880016">+91 99558 80016</a>
-            </div>
-            <div>
-              <span>EMAIL</span>
-              <a href={emailUrl} target="_blank" rel="noreferrer">
-                hti.kanpur@gmail.com
-              </a>
-            </div>
-          </address>
-          <div className="contact-buttons">
-            <a className="button button-orange" href="tel:+919955880016">
-              Call Now <Arrow />
-            </a>
-            <a
-              className="button button-blue"
-              href={whatsappUrl}
-              target="_blank"
-              rel="noreferrer"
-            >
-              WhatsApp <Arrow />
-            </a>
-            <a
-              className="button button-outline"
-              href={emailUrl}
-              target="_blank"
-              rel="noreferrer"
-            >
-              Send Email <Arrow />
-            </a>
-          </div>
-        </div>
-      </section>
+      <AddressSection />
 
       <footer>
         <div className="site-shell footer-grid">

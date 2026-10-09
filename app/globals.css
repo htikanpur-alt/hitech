@@ -1828,8 +1828,9 @@ footer nav a:hover {
 .about-contact-grid {
   display: grid;
   grid-template-columns: 1fr 0.9fr auto;
-  gap: 45px;
+  gap: 25px;
   align-items: center;
+  justify-content: space-between;
 }
 .about-contact-grid > div > p:not(.section-kicker) {
   color: #536068;
@@ -1854,6 +1855,39 @@ footer nav a:hover {
 .about-contact-grid address a {
   color: var(--blue);
   font-weight: 700;
+}
+
+@media (max-width: 760px) {
+  /* logo now lives in the nav bar on mobile */
+  .masthead {
+    display: none;
+  }
+
+  .navigation-inner {
+    min-height: 58px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  /* logo on the left, same row as MENU */
+  .navigation-inner::before {
+    content: "";
+    flex: 0 0 auto;
+    width: 175px;
+    height: 48px;
+    background: url("/hitech-logo.jpeg") no-repeat;
+    background-size: 205px auto; /* scale of the logo image */
+    background-position: -28px -8px; /* crops the white space in the JPEG */
+  }
+
+  .navigation-inner > .mobile-navigation > summary {
+    min-width: 100px;
+    padding: 8px 14px;
+  }
+  .mobile-dropdown {
+    top: 40px;
+  }
 }
 
 @media (max-width: 1000px) {

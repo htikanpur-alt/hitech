@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import SiteNavigation from "../site-navigation";
+import AddressSection from "@/components/AddressSection";
 
 export const metadata: Metadata = {
   title: "About Hi-Tech Group | Manufacturing & Engineering, Kanpur",
@@ -281,51 +282,7 @@ export default function AboutUsPage() {
         </div>
       </section>
 
-      <section className="about-contact section">
-        <div className="site-shell about-contact-grid">
-          <div>
-            <p className="section-kicker">CONTACT OUR TEAM</p>
-            <h2>Discuss your plant requirement.</h2>
-            <p>
-              Share your product, machinery, project or compliance requirement
-              with our Kanpur team.
-            </p>
-          </div>
-          <div>
-            <div className="flex">
-              <address className="inline-flex">
-                <span>FACTORY ADDRESS</span>
-                <strong>
-                  Hitech Idustries <br />
-                  508/37, Ratanpur, Mirzapur, Panki,
-                  <br />
-                  Kanpur, Uttar Pradesh, (India) – 208020
-                </strong>
-                <a href="tel:+919955880016">+91 99558 80016</a>
-                <a href={emailUrl} target="_blank" rel="noreferrer">
-                  hti.kanpur@gmail.com
-                </a>
-              </address>
-              <address>
-                <span>FACTORY ADDRESS</span>
-                <strong>
-                  Hitech Engineering <br />
-                  Plot No. 47, E-Block, Byapar Nagar, Ispat Nagar,
-                  <br />
-                  Kanpur Uttar Pradesh (India) – 208020
-                </strong>
-                <a href="tel:+919897882518">+91 98978 82518</a>
-                <a href={emailUrl} target="_blank" rel="noreferrer">
-                  hte.kanpur@gmail.com
-                </a>
-              </address>
-            </div>
-          </div>
-          <a className="button button-orange" href="/#contact">
-            Send Your Enquiry <span aria-hidden="true">→</span>
-          </a>
-        </div>
-      </section>
+      <AddressSection />
 
       <footer>
         <div className="site-shell footer-grid">
